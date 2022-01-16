@@ -1,0 +1,28 @@
+.tartar{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    background: url(../../public/images/tartar.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .txtBox{
+        max-width: 500px;
+        padding: 10px;
+        margin: 50px;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .button{
+            margin: 20px;
+            border: 2px solid white;
+        }
+    }
+}//amira e o prajitoare

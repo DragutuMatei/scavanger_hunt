@@ -1,0 +1,30 @@
+@import "./variabiles.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  text-indent: 20px;
+}
+
+html {
+  overflow-x: hidden;
+  background: url(../../public/images/back.svg);
+}
+p {
+  font-family: $font;
+  color: white;
+  font-size: 25px;
+  max-width: 700px;
+  margin-top: 100px;
+}
+@import "./firstPage.scss";
+@import "./button.scss";
+@import "./tartar.scss";
+@import "./underworld.scss";
+@import "./cerber.scss";
+@import "./styx.scss"
+//amira e o prajitoare

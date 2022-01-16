@@ -1,0 +1,29 @@
+.underworld {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: url(../../public/images/underworld.jpg);
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  p {
+    color: white;
+    font-size: 25px;
+    max-width: 700px;
+    margin-top: 100px;
+    z-index: 99;
+  }
+
+  img {
+    z-index: 1;
+    width: 100px;
+    // height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+  }
+}
