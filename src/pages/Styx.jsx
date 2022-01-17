@@ -1,22 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Styx() {
-  const click = (asta, e) => {
-    const indexRandom = Math.floor(Math.random() * 3);
+  const [indexRandom, setIndexRandom] = useState(Math.floor(Math.random() * 3));
 
+  const [globalClasses, setClasses] = useState("joc ");
+
+  useEffect(() => {
+    const parent = document.querySelectorAll(".cup");
+
+    const el = document.createElement("img");
+    el.setAttribute("src", "/images/coin.png");
+    el.setAttribute("class", "coin");
+    el.setAttribute("id", "coins");
+    parent[indexRandom].append(el);
+  }, []);
+
+  //taci drq
+  //ma doare la coaie de el
+  const click = async (asta, e) => {
     const element = asta.target;
 
-    if (indexRandom === e) {
-      const parent = element.parentElement;
-      const el = document.createElement("img");
-      el.setAttribute("src", "/images/coin.png");
-      el.setAttribute("class", "coin");
-      parent.append(el);
+    element.classList.add("active");
+
+    if (indexRandom !== e) {
+      setClasses("joc not");
+
+      setTimeout(() => {
+        setClasses("joc");
+      }, 120000);
+
+      console.log("gata coaie");
     }
 
-    element.classList.add("active");
     setTimeout(() => {
       element.classList.remove("active");
+      setTimeout(() => {
+        if (indexRandom === e) {
+          alert(
+            "Bravo! L-ai invins pe Charon si acesta te va scoate din Invern."
+          );
+          window.location.pathname = "/meduza";
+        }
+      }, 400);
     }, 1500);
   };
 
@@ -34,7 +59,7 @@ function Styx() {
         </p>
       </div>
 
-      <div className="joc">
+      <div className={globalClasses}>
         <div className="cup">
           <img src="/images/cup.png" onClick={(e) => click(e, 0)} alt="" />
         </div>

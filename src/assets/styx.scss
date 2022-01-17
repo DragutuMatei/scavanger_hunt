@@ -20,6 +20,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    user-select: none;
 
     .cup {
       width: 300px;
@@ -46,4 +47,7 @@
       }
     }
   }
+}
+.not {
+  pointer-events: none;
 }

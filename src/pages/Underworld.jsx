@@ -120,7 +120,7 @@ function Underworld() {
       <img
         className="imgs"
         src="/images/rodie.png"
-        style={{ left: coorRandom().x, top: coorRandom().y, backgroundColor: "red", }}
+        style={{ left: coorRandom().x, top: coorRandom().y, }}
         onClick={() => test(6)}
         alt=""
       />

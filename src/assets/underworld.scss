@@ -25,5 +25,10 @@
     border-radius: 50%;
     position: absolute;
     cursor: pointer;
+
+    &:nth-child(7) {
+      z-index: 999;
+      background: red;
+    }
   }
 }
