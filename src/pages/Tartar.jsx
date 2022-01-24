@@ -1,9 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Levels from "../components/Levels";
+import Timer from "../components/Timer";
 
 function Tartar() {
   const [fail, setFail] = useState(true);
   const [start, setStart] = useState(false);
   const [test, setTest] = useState(false);
+  const [gata, setGata] = useState(false);
 
   const event = (e) => {
     let checkName = e.target.classList.value;
@@ -13,21 +16,45 @@ function Tartar() {
   const check = (name) => {
     if (!fail)
       if (name === "start") setStart(true);
-      else if (start && name === "test") setTest(true);
+      else if (name === "test") setTest(true);
       else if (start && name === "border") {
         setFail(true);
         if (window.confirm("Ai pierdut, ia-o de la capat")) {
           setStart(false);
           setTest(false);
         }
-      } else if (start && test && !fail && name === "finish") {
+      } else if (start && test && !fail && name === "finish" && !gata) {
         window.alert("Bravo! L-ai invins pe Cronos! Poti sa treci mai departe");
         window.location.pathname = "/underworld";
       }
   };
 
+  useEffect(() => {
+    if (gata) {
+      alert("Timpul a expirat!");
+      setFail(true);
+      setStart(false);
+      setTest(false);
+    }
+  }, [gata]);
+
   return (
     <div className="tartar" onMouseMove={event}>
+      <Levels level={1} />
+      <div className="timerContainer">
+        {!fail ? (
+          <Timer
+            hours={0}
+            minutes={0}
+            seconds={30}
+            fct={(x) => {
+              if (x) setGata(true);
+            }}
+          />
+        ) : (
+          <div className="timer">30</div>
+        )}
+      </div>
       <div className="txtBox">
         <p>
           Aici începe misiunea ta. Te afli în Tartar, cea mai joasă regiune din
@@ -45,7 +72,9 @@ function Tartar() {
         >
           Start Nivel
         </div>
-        {!fail && <h1>Jocul a inceput</h1>}
+        {!fail && (
+          <h1>Ai inceput jocul! </h1>
+        )}
       </div>
       <svg
         width="1188"
@@ -56,8 +85,8 @@ function Tartar() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M1045 22H1110V123V124V188H919V124H867V180H762V476H1029V381H969V446H802V383V381V277V212H1118H1183V562V627H1017V692H858H793V617H634V649V714H124V651V649V641H70H5V343H70H190V408V460H360V525H443V515V450H582V210H490V147V145V100H280V133H374H439V249H533V297V414H468H309H244V297H150H85V54H150V232H309V297V349H468V297H374V249V198H215V133V35H280H555V100V145H582H599H647V515H602H582H508V590H443H284V525H190H125V408H70V576H124H201V641V649H569V552H634H793H858V627H950V562H1118V277H867V381H907V316H1094V381V534H1029H697V476V115H762H787V59H976V123H1045V22Z"
           fill="#23395B"
         />

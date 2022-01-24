@@ -1,12 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
+import Levels from "../components/Levels";
+import Timer from "../components/Timer";
 
 let incercari = 1;
 function Underworld() {
   const txt = useRef();
+  const [gata, setGata] = useState(false);
+  const [index, setIndex] = useState(Math.floor(Math.random() * 15));
+  console.log(index);
 
   const test = (i) => {
-    console.log(i);
-    if (i === 6) {
+    i--;
+    if (i === index) {
       alert(
         "Bravo! Ai nimerit rodia corecta si hades te lasa sa iesi din Infern"
       );
@@ -17,7 +22,7 @@ function Underworld() {
       } else {
         incercari = 1;
         alert("Nu mai ai incercari! Incepe din nou");
-        window.location.reload(false);
+        window.location.reload();
       }
       incercari++;
     }
@@ -28,8 +33,6 @@ function Underworld() {
     const imgs = document.querySelectorAll(".imgs");
 
     const a = txt.getBoundingClientRect();
-
-    console.log(a.x, a.y, a.x + a.width);
 
     const txt_x_inital = a.x;
     const txt_x_final = a.x + a.width;
@@ -44,13 +47,22 @@ function Underworld() {
         imgs[i].style.left = coorRandom().x + "px";
         imgs[i].style.top = coorRandom().y + "px";
         cosmin = imgs[i].getBoundingClientRect();
-        console.log("cosmin.x", i);
       } while (
         (cosmin.x + 100 > txt_x_inital && cosmin.x + 100 < txt_x_final) ||
         (cosmin.y + 100 > txt_y_inital && cosmin.y + 100 < txt_y_final)
       );
     }
+
+    imgs[index].style.zIndex = 999;
+    imgs[index].style.background = "red";
   }, []);
+
+  useEffect(() => {
+    if (gata) {
+      alert("Timpul a expirat");
+      window.location.reload();
+    }
+  }, [gata]);
 
   const coorRandom = () => {
     let x = Math.random() * window.innerWidth;
@@ -72,13 +84,30 @@ function Underworld() {
 
   return (
     <div className="underworld">
-      <p ref={txt} className="p">
-        Acum că ai ieșit din Tartat, înca te afli în lumea de apoi, tărâm condus
-        de Hades și Persefona, după cum știți Persefona a rămas blocată în lumea
-        de apoi după ce a mâncat un sâmbure de rodie, fiind obligată să își
-        petreaca 6 luni din an în Infern. Misiunea ta este să găsești arbustul
-        de rodie din această livadă doar din trei încercări.
-      </p>
+      <Levels level={2} />
+
+      <div className="timerContainer">
+        {
+          <Timer
+            hours={0}
+            minutes={0}
+            seconds={20}
+            fct={(x) => {
+              if (x) setGata(true);
+            }}
+          />
+        }
+      </div>
+      <div className="txtBox">
+        <p ref={txt} className="p">
+          Acum că ai ieșit din Tartat, înca te afli în lumea de apoi, tărâm
+          condus de Hades și Persefona, după cum știți Persefona a rămas blocată
+          în lumea de apoi după ce a mâncat un sâmbure de rodie, fiind obligată
+          să își petreaca 6 luni din an în Infern. Misiunea ta este să găsești
+          arbustul de rodie din această livadă doar din trei încercări.
+        </p>
+      </div>
+
       <img
         className="imgs"
         onClick={() => test(1)}
@@ -120,7 +149,7 @@ function Underworld() {
       <img
         className="imgs"
         src="/images/rodie.png"
-        style={{ left: coorRandom().x, top: coorRandom().y, }}
+        style={{ left: coorRandom().x, top: coorRandom().y }}
         onClick={() => test(6)}
         alt=""
       />

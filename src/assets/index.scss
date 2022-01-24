@@ -1,4 +1,12 @@
 @import "./variabiles.scss";
+@import "./firstPage.scss";
+@import "./button.scss";
+@import "./tartar.scss";
+@import "./underworld.scss";
+@import "./cerber.scss";
+@import "./styx.scss";
+@import "./meduza.scss";
+@import "./poseidon.scss";
 
 * {
   margin: 0;
@@ -16,15 +24,71 @@ html {
 }
 p {
   font-family: $font;
-  color: white;
   font-size: 25px;
   max-width: 700px;
-  margin-top: 100px;
 }
-@import "./firstPage.scss";
-@import "./button.scss";
-@import "./tartar.scss";
-@import "./underworld.scss";
-@import "./cerber.scss";
-@import "./styx.scss"
+.txtBox {
+  max-width: 500px;
+  padding: 20px;
+  align-items: center;
+  background: white;
+  border: 5px solid black;
+  border-radius: 0 20px 20px 0;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .button {
+    margin: 20px;
+    border: 2px solid white;
+  }
+}
+.timerContainer {
+  position: fixed;
+  left: 20px;
+  top: 70vh;
+  background: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  .timer {
+    color: $rich-black-fogra-29;
+    z-index: 9999;
+    font-size: 30px;
+    font-family: $font;
+    font-weight: 800;
+  }
+}
+
+.levels {
+  width: 500px;
+  border-radius: 50px;
+  background: $queen-blue;
+  top: 10px;
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .pct {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $cadet-grey;
+    margin: 10px;
+  }
+  .gata {
+    background: $light-cyan;
+  }
+}
 //amira e o prajitoare

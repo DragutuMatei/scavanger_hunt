@@ -1,0 +1,30 @@
+.poseidon {
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../../public/images/ocean.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .txtBox {
+    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .joc {
+    width: 100vw;
+    position: relative;
+
+    img {
+      width: 50px;
+      height: auto;
+      position: absolute;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Levels from "../components/Levels";
 
 function Styx() {
   const [indexRandom, setIndexRandom] = useState(Math.floor(Math.random() * 3));
@@ -22,15 +23,18 @@ function Styx() {
 
     element.classList.add("active");
 
-    if (indexRandom !== e) {
-      setClasses("joc not");
+    setTimeout(() => {
+      if (indexRandom !== e) {
+        alert(
+          "Ai ales gresit! Trebuie sa astepti 2 minute ca sa poti sa reincerci!"
+        );
+        setClasses("joc not");
 
-      setTimeout(() => {
-        setClasses("joc");
-      }, 120000);
-
-      console.log("gata coaie");
-    }
+        setTimeout(() => {
+          setClasses("joc");
+        }, 120000);
+      }
+    }, 400);
 
     setTimeout(() => {
       element.classList.remove("active");
@@ -47,7 +51,8 @@ function Styx() {
 
   return (
     <div className="styx">
-      <div className="txt">
+      <Levels level={4} />
+      <div className="txtBox">
         <p>
           Ești la un pas de a intra în lumea celor vii, singurul obstacol ce te
           mai desparte este Râul Styx, care poate fi trecut doar cu ajutorul

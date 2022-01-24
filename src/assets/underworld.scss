@@ -2,7 +2,7 @@
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   background: url(../../public/images/underworld.jpg);
   background-position: left;
@@ -10,10 +10,8 @@
   background-repeat: no-repeat;
 
   p {
-    color: white;
     font-size: 25px;
     max-width: 700px;
-    margin-top: 100px;
     z-index: 99;
   }
 
@@ -26,9 +24,5 @@
     position: absolute;
     cursor: pointer;
 
-    &:nth-child(7) {
-      z-index: 999;
-    //   background: red;
-    }
   }
 }

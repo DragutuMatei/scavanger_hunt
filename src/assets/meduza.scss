@@ -1,0 +1,55 @@
+.meduza {
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../../public/images/athena_temple.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .txtBox {
+    margin-bottom: 20px;
+  }
+
+  .joculet {
+    width: 100vw;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+
+    .hero {
+      width: 80px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+    }
+    .meduzaPers {
+      width: 100px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 50vw;
+    }
+
+    .coloana {
+      width: auto;
+      height: 150px;
+      top: 50%;
+      position: absolute;
+    }
+    .left {
+      left: 0;
+    }
+
+    .right {
+      right: 0;
+    }
+  }
+}

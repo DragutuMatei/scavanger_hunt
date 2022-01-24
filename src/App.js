@@ -5,6 +5,8 @@ import FirstPage from "./pages/FirstPage";
 import Tartar from "./pages/Tartar";
 import Underworld from "./pages/Underworld";
 import Styx from "./pages/Styx";
+import Meduza from "./pages/Meduza";
+import Poseidon from "./pages/Poseidon";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/underworld" element={<Underworld />} />
         <Route path="/cerber" element={<Cerber />} />
         <Route path="/styx" element={<Styx />} />
+        <Route path="/meduza" element={<Meduza />} />
+        <Route path="/poseidon" element={<Poseidon />} />
       </Routes>
     </BrowserRouter>
   );
