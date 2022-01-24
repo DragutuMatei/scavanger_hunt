@@ -7,6 +7,21 @@ function Styx() {
   const [globalClasses, setClasses] = useState("joc ");
 
   useEffect(() => {
+    console.log(window.sessionStorage.getItem("asdasdasd"));
+    if (
+      window.sessionStorage.getItem("asdasdasd") === "true" ||
+      window.sessionStorage.getItem("hgjjfhj") === "true"
+    ) {
+      setClasses("joc not");
+
+      console.log("pt ca ai dat refresh");
+      setTimeout(() => {
+        setClasses("joc");
+        window.sessionStorage.removeItem("asdasdasd");
+        window.localStorage.removeItem("hgjjfhj");
+      }, 120000);
+    }
+
     const parent = document.querySelectorAll(".cup");
 
     const el = document.createElement("img");
@@ -14,6 +29,7 @@ function Styx() {
     el.setAttribute("class", "coin");
     el.setAttribute("id", "coins");
     parent[indexRandom].append(el);
+    
   }, []);
 
   //taci drq
@@ -23,18 +39,7 @@ function Styx() {
 
     element.classList.add("active");
 
-    setTimeout(() => {
-      if (indexRandom !== e) {
-        alert(
-          "Ai ales gresit! Trebuie sa astepti 2 minute ca sa poti sa reincerci!"
-        );
-        setClasses("joc not");
-
-        setTimeout(() => {
-          setClasses("joc");
-        }, 120000);
-      }
-    }, 400);
+    tst(e);
 
     setTimeout(() => {
       element.classList.remove("active");
@@ -47,6 +52,27 @@ function Styx() {
         }
       }, 400);
     }, 1500);
+  };
+
+  const tst = (e) => {
+    setTimeout(() => {
+      if (indexRandom !== e) {
+        alert(
+          "Ai ales gresit! Trebuie sa astepti 2 minute ca sa poti sa reincerci!"
+        );
+        setClasses("joc not");
+
+        window.sessionStorage.setItem("asdasdasd", "true");
+        window.localStorage.setItem("hgjjfhj", "true");
+
+        setTimeout(() => {
+          setClasses("joc");
+
+          window.sessionStorage.removeItem("asdasdasd");
+          window.localStorage.removeItem("hgjjfhj");
+        }, 120000);
+      }
+    }, 400);
   };
 
   return (
