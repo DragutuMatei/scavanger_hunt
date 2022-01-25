@@ -7,6 +7,8 @@ import Underworld from "./pages/Underworld";
 import Styx from "./pages/Styx";
 import Meduza from "./pages/Meduza";
 import Poseidon from "./pages/Poseidon";
+import Hefaistos from "./pages/Hefaistos";
+import Icarus from "./pages/Icarus";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="/styx" element={<Styx />} />
         <Route path="/meduza" element={<Meduza />} />
         <Route path="/poseidon" element={<Poseidon />} />
+        <Route path="/hefaistos" element={<Hefaistos />} />
+        <Route path="/icarus" element={<Icarus/>} />
       </Routes>
     </BrowserRouter>
   );
