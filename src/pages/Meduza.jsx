@@ -40,11 +40,6 @@ function Meduza() {
   }, []);
 
   const rezv = () => {
-    // const seuita = setInterval(() => {
-    //   setSrc("/images/cerber.png");
-    //   clearInterval(seuita);
-    // }, 2000);
-
     setTimeout(() => {
       setSrc("/images/cerber.png");
       se = true;
@@ -56,11 +51,6 @@ function Meduza() {
       se = false;
       console.log(se);
     }, adaSecundeleAleaRandom(2500, 4000));
-
-    // const seuita2 = setInterval(() => {
-    //   setSrc("/images/medusa.png");
-    //   clearInterval(seuita2);
-    // }, 4000);
   };
 
   const press = (e) => {

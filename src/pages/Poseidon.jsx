@@ -241,7 +241,7 @@ function Poseidon() {
           iar înotul nu este o opțiune. Cum Poseidon mai stă pe stănci privind
           templul pierdut în bătălia cu Atena, te observă pe plajă și îți oferă
           un târg, iar în schimb el te va duce în Creta. Tot ce trebuie să faci
-          e să-l ajuți să își prindă cei nouă cai la caleașcă.
+          e să-l ajuți să își prindă cei 21 de cai la caleașcă.
         </p>
       </div>
 

@@ -54,7 +54,8 @@ function Hefaistos() {
           Minotaurul aflat în labirintul de sub castel. Te apropii de el și-l
           intrebi ce s-a întâmplat, iar acesta îți spune că sabia oferită de
           Ariadna pentru a învinge bestia este distrusă. Ajută-l pe acesta să
-          unească piesele potrivite pentru a reface sabia.
+          unească piesele potrivite pentru a reface sabia. Dacă greșești de 3
+          ori vei lua călătoria de la început.
         </p>
       </div>
       <div className="joc">

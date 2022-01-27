@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function FirstPage() {
+  useEffect(() => {
+    window.localStorage.clear();
+    window.sessionStorage.clear();
+
+  }, []);
+
   return (
     <div className="firstPage">
       <div className="firsttxt">

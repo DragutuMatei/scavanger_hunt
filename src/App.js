@@ -22,7 +22,7 @@ function App() {
         <Route path="/meduza" element={<Meduza />} />
         <Route path="/poseidon" element={<Poseidon />} />
         <Route path="/hefaistos" element={<Hefaistos />} />
-        <Route path="/icarus" element={<Icarus/>} />
+        <Route path="/icarus" element={<Icarus />} />
       </Routes>
     </BrowserRouter>
   );

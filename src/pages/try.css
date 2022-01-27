@@ -1,0 +1,113 @@
+.game-container {
+  width: 500px;
+  height: 730px;
+  position: relative;
+  left: 80px;
+  overflow: hidden;
+  margin-right: 100px;
+}
+
+.icarus .txtBox{
+  position: absolute;
+}
+
+.border-left {
+  width: 80px;
+  height: 790px;
+  position: absolute;
+  z-index: +2;
+}
+
+.border-right {
+  width: 80px;
+  height: 790px;
+  position: absolute;
+  z-index: +2;
+  left: 580px;
+}
+
+.border-top {
+  width: 660px;
+  height: 50px;
+  position: absolute;
+  z-index: +2;
+  top: -50px;
+}
+
+.sky {
+  width: 500px;
+  height: 580px;
+  position: absolute;
+}
+
+.ground {
+  width: 500px;
+  height: 150px;
+  position: absolute;
+  top: 580px;
+  z-index: +1;
+}
+
+.bird {
+  background: url("../../public/images/hero.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  left: 220px;
+  bottom: 50%;
+}
+
+.obstacle {
+  background-image: url("../../public/images/flappybird-pipe.png");
+  width: 60px;
+  height: 300px;
+  position: absolute;
+}
+
+.topObstacle {
+  background-image: url("../../public/images/flappybird-pipe.png");
+  transform: rotate(180deg);
+  width: 60px;
+  height: 300px;
+  position: absolute;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.ground-container {
+  height: 150px;
+  width: 580px;
+  left: 80px;
+  position: absolute;
+}
+
+.ground-moving {
+  position: absolute;
+  top: 580px;
+  height: 150px;
+  background-repeat: repeat-x;
+  animation: slideright 100s infinite linear;
+  -webkit-animation: slideright 100s infinite linear;
+  width: 100%;
+  z-index: +1;
+}

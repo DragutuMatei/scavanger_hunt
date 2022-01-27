@@ -85,7 +85,7 @@ function Styx() {
           bătrânului barcagiu, Charon. Ajuns la barcagiu acesta îți spune că
           poate să te treacă râul doar dacă îi oferi o monedă, în caz contrar va
           trebui să aștepti o sută de ani până poți încerca iar. Misiune ta este
-          să găsești o moneda sub potire, dacă nu o găsești va trebui să aștepți
+          să găsești o moneda sub pahare, dacă nu o găsești va trebui să aștepți
           două minute până poți încerca iar.
         </p>
       </div>
