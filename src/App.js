@@ -9,6 +9,7 @@ import Meduza from "./pages/Meduza";
 import Poseidon from "./pages/Poseidon";
 import Hefaistos from "./pages/Hefaistos";
 import Icarus from "./pages/Icarus";
+import Hermes from "./pages/Hermes";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/poseidon" element={<Poseidon />} />
         <Route path="/hefaistos" element={<Hefaistos />} />
         <Route path="/icarus" element={<Icarus />} />
+        <Route path="/hermes" element={<Hermes />} />
       </Routes>
     </BrowserRouter>
   );

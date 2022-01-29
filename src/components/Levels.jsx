@@ -17,7 +17,6 @@ function Levels({ level }) {
       <div className="pct"></div>
       <div className="pct"></div>
       <div className="pct"></div>
-      <div className="pct"></div>
     </div>
   );
 }
