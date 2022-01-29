@@ -54,7 +54,7 @@ function Underworld() {
     }
 
     imgs[index].style.zIndex = 999;
-    imgs[index].style.background = "red";
+    // imgs[index].style.background = "red";
   }, []);
 
   useEffect(() => {
