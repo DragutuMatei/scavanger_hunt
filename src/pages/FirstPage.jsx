@@ -15,7 +15,6 @@ function FirstPage() {
         <Link className="button start" to="tartar">
           Start
         </Link>
-        <h1 className="amira">Amira e o prajitoare</h1>
       </div>
     </div>
   );
