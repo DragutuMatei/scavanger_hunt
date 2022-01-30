@@ -38,6 +38,16 @@
       left: 50vw;
     }
 
+    img[src="/images/medusa_ok.png"]{
+      
+      width: 150px;
+      height: 272px;
+      position: absolute;
+      top: 0;
+      left: 50vw;
+      object-fit: cover;
+    }
+
     .coloana {
       width: auto;
       height: 150px;

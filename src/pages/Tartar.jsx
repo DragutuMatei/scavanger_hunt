@@ -58,7 +58,7 @@ function Tartar() {
       <div className="txtBox">
         <p>
           Aici începe misiunea ta. Te afli în Tartar, cea mai joasă regiune din
-          Underworld, unde zei îi țin închiși pe Titani, misunea ta e să
+          Underworld, unde zeii îi țin închiși pe Titani. Misunea ta e să
           completezi labirintul de mai jos pentru a ieși de aici, dar ai grijă
           să nu atingi pereții labirintului pentru a nu te cufunda în abis.
           Trebuie sa ieși cât mai repede din Tartar, altfel Titanii vor veni

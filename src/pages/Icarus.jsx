@@ -27,7 +27,7 @@ const Icarus = () => {
         console.log("asd", );
         isGameOver = true;
         document.removeEventListener("keyup", control);
-        alert("bine frt");
+        alert("Ai trecut cu bine si de aceasta provocare, iar ultima te asteapta!");
         window.location.pathname = "/hermes";
       }
     }
@@ -122,7 +122,7 @@ const Icarus = () => {
       <Levels level={8} />
       <div className="txtBox">
         <p>
-          Acum că l-ai ajutat pe Tezeu să-l învigă pe Minotaur ai reușit să urci
+          Acum că l-ai ajutat pe Tezeu să-l învigă pe Minotaur, ai reușit să urci
           in legendarul turn, unde Icar si tatal lui, Daedalus, au fost închiși
           de regele Minos. Pentru a reuși să ajungi în Impărăția Cerurilor
           trebuie să îmbraci aripile de ceară construite de Daedalus și să te

@@ -16,7 +16,7 @@ function Hefaistos() {
           (test[0] === 1 && test[1] === 4) ||
           (test[0] === 4 && test[1] === 1)
         ) {
-          alert("ai nimerit");
+          alert("Sabia e completa, iar urmatoarea proba te asteapta");
           window.location.pathname = "/icarus";
         } else {
           incercari++;
@@ -49,13 +49,13 @@ function Hefaistos() {
       <Levels level={7} />
       <div className="txtBox">
         <p>
-          Odată ajuns în Creta, te afli in Knossos la palatul regelui Minos,
+          Odată ajuns în Creta, te afli in Knossos, la palatul regelui Minos,
           unde îl observi pe Tezeu, tânărul care ar fi trebuit să-l ucidă pe
           Minotaurul aflat în labirintul de sub castel. Te apropii de el și-l
           intrebi ce s-a întâmplat, iar acesta îți spune că sabia oferită de
           Ariadna pentru a învinge bestia este distrusă. Ajută-l pe acesta să
           unească piesele potrivite pentru a reface sabia. Dacă greșești de 3
-          ori vei lua călătoria de la început.
+          ori, vei lua călătoria de la început.
         </p>
       </div>
       <div className="joc">

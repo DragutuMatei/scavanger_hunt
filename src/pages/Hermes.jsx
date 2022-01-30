@@ -114,14 +114,14 @@ function Hermes() {
     blackjackGame.turnsOver = true;
     let winner = computerWinner();
     if (winner === YOU) {
-      alert("oke");
+      alert("Felicitari! Ai completat Scavenger Hunt, iar Zeus te asteapta");
       window.location.pathname = "/olimp";
     } else if (winner === DEALER) {
-        alert("a castigat hermes, o sa reincepi tot jocu");
-        window.location.pathname = "/tartar"
+      alert("Hermes a invins, asa ca esti nevoit sa reincepi tot jocul!");
+      window.location.pathname = "/tartar";
     } else {
       alert(
-        "a fost egalitate asa ca mai primesti o sansa, apasa pe deal sa reincepi"
+        "A fost egalitate, asa ca mai primesti o sansa, apasa pe deal si vei reincepe nivelul!"
       );
     }
   };
@@ -151,8 +151,8 @@ function Hermes() {
       <Levels level={9} />
       <div className="txtBox">
         <p>
-          Felicitări ai ajuns în împărăția Cerurilor, tot ce te mai desparte de
-          final este Hermes, mâna dreaptă a lui Zeus. În mitologia greacă pe
+          Felicitări! Ai ajuns în împărăția Cerurilor, tot ce te mai desparte de
+          final este Hermes, mâna dreaptă a lui Zeus. În mitologia greacă, pe
           langă mesagerul zeităților, Hermes este considerat si zeul jocurilor
           de noroc. Acesta te va lăsa să-l vezi pe Zeus doar dacă îl învigi la
           un joc de Blackjack.

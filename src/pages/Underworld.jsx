@@ -13,12 +13,12 @@ function Underworld() {
     i--;
     if (i === index) {
       alert(
-        "Bravo! Ai nimerit rodia corecta si hades te lasa sa iesi din Infern"
+        "Bravo! Ai nimerit rodia corecta si Hades te lasa sa iesi din Infern"
       );
       window.location.pathname = "/cerber";
     } else {
       if (incercari !== 3) {
-        alert(`Raspuns gresit! Mai ${3 - incercari} incercari`);
+        alert(`Raspuns gresit! Mai ai ${3 - incercari} incercari`);
       } else {
         incercari = 1;
         alert("Nu mai ai incercari! Incepe din nou");
@@ -100,8 +100,8 @@ function Underworld() {
       </div>
       <div className="txtBox">
         <p ref={txt} className="p">
-          Acum că ai ieșit din Tartat, înca te afli în lumea de apoi, tărâm
-          condus de Hades și Persefona, după cum știți Persefona a rămas blocată
+          Acum că ai ieșit din Tartar, înca te afli în lumea de apoi, tărâm
+          condus de Hades și Persefona. După cum știți, Persefona a rămas blocată
           în lumea de apoi după ce a mâncat un sâmbure de rodie, fiind obligată
           să își petreaca 6 luni din an în Infern. Misiunea ta este să găsești
           arbustul de rodie din această livadă doar din trei încercări.

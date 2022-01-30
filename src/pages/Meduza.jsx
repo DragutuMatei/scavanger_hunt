@@ -4,7 +4,7 @@ import Levels from "../components/Levels";
 let se = false;
 function Meduza() {
   const [seUita, setSeUita] = useState(false);
-  const [src, setSrc] = useState("/images/medusa.png");
+  const [src, setSrc] = useState("/images/medusa_ok.png");
   const [trecut, setAtrecut] = useState(false);
   const [gata, setGata] = useState(false);
   const adaSecundeleAleaRandom = (min, max) => {
@@ -23,25 +23,17 @@ function Meduza() {
     console.log("aicea");
 
     const joc = setInterval(() => {
-      // setSeUita(false);
-      // se = false;
-      // console.log(se, "Asd");
       rezv();
-      // setSeUita((old) => (old = true));
-      // setSeUita(true);
-      // se = true;
-      // console.log(se);
       if (gata) {
         clearInterval(joc);
       }
     }, 6000);
 
-    console.log("gata coaie ca bag pula");
   }, []);
 
   const rezv = () => {
     setTimeout(() => {
-      setSrc("/images/cerber.png");
+      setSrc("/images/medusa_ok.png");
       se = true;
       console.log(se);
     }, adaSecundeleAleaRandom(1000, 3000));
@@ -63,7 +55,7 @@ function Meduza() {
         e.key == "a") &&
       se
     ) {
-      alert("aia e");
+      alert("Meduza te-a vazut si trebuie sa o iei de la capat.");
       hero.style.left = 0 + "px";
     }
 
@@ -74,7 +66,7 @@ function Meduza() {
     const left = heroB.left;
     const right = left + hero.getBoundingClientRect().width;
     if (finish.getBoundingClientRect().x <= heroB.x) {
-      alert("gata jocu");
+      alert("Ai reusit sa treci neobservat in etapa urmatoare.");
       window.location.pathname = "/poseidon";
     }
 
@@ -96,8 +88,8 @@ function Meduza() {
       <div className="txtBox">
         <p>
           Ai ajuns la templul zeiței Atena, dar ai grija deoarece Medusa este în
-          apropiere, pentru a trece de aceasta și a te apropia de vârful
-          Muntelui Olimp trebuie să treci pe langă ea făra ca aceasta să te
+          apropiere. Pentru a trece de aceasta și a te apropia de vârful
+          Muntelui Olimp trebuie să treci pe langă ea făra să te
           observe, altfel te va împietri.
         </p>
       </div>
