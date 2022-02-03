@@ -36,7 +36,7 @@ function Olimp() {
         </p>
       </div>
       <form ref={form} onSubmit={sendEmail}>
-        <h2>Dacă ți-a plăcut jocul, lasa-ne un mesaj</h2>
+        <h2>Dacă ți-a plăcut jocul, lasă-ne un mesaj</h2>
         <input type="text" name="nume" placeholder="nume" id="" />
         <input type="text" name="email" placeholder="email" id="" />
         <textarea
