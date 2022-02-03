@@ -1,4 +1,5 @@
 import React from "react";
+import Help from "../components/Help";
 import Levels from "../components/Levels";
 
 let blackjackGame = {
@@ -149,6 +150,9 @@ function Hermes() {
   return (
     <div className="hermes">
       <Levels level={9} />
+      <Help  text={
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+        }/>
       <div className="txtBox">
         <p>
           Felicitări! Ai ajuns în împărăția Cerurilor, tot ce te mai desparte de

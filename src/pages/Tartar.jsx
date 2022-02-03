@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Help from "../components/Help";
 import Levels from "../components/Levels";
 import Timer from "../components/Timer";
 
@@ -37,10 +38,14 @@ function Tartar() {
       setTest(false);
     }
   }, [gata]);
-
   return (
     <div className="tartar" onMouseMove={event}>
       <Levels level={1} />
+      <Help
+        text={
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+        }
+      />
       <div className="timerContainer">
         {!fail ? (
           <Timer
@@ -72,9 +77,7 @@ function Tartar() {
         >
           Start Nivel
         </div>
-        {!fail && (
-          <h1>Ai inceput jocul! </h1>
-        )}
+        {!fail && <h1>Ai inceput jocul! </h1>}
       </div>
       <svg
         width="1188"

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Help from "../components/Help";
 import Levels from "../components/Levels";
 
 function Styx() {
@@ -78,6 +79,10 @@ function Styx() {
   return (
     <div className="styx">
       <Levels level={4} />
+      <Help
+       text={
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+      }/>
       <div className="txtBox">
         <p>
           Ești la un pas de a intra în lumea celor vii, singurul obstacol ce te

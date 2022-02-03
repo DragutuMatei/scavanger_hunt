@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Help from "../components/Help";
 import Levels from "../components/Levels";
 
 let se = false;
@@ -28,7 +29,6 @@ function Meduza() {
         clearInterval(joc);
       }
     }, 6000);
-
   }, []);
 
   const rezv = () => {
@@ -84,13 +84,17 @@ function Meduza() {
   return (
     <div className="meduza">
       <Levels level={5} />
-
+      <Help
+        text={
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+        }
+      />
       <div className="txtBox">
         <p>
           Ai ajuns la templul zeiței Atena, dar ai grija deoarece Medusa este în
           apropiere. Pentru a trece de aceasta și a te apropia de vârful
-          Muntelui Olimp trebuie să treci pe langă ea făra să te
-          observe, altfel te va împietri.
+          Muntelui Olimp trebuie să treci pe langă ea făra să te observe, altfel
+          te va împietri.
         </p>
       </div>
       <div className="joculet">

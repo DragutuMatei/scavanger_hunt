@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Help from "../components/Help";
 import Levels from "../components/Levels";
 import Timer from "../components/Timer";
 let secsundeFrt;
@@ -234,6 +235,9 @@ function Poseidon() {
   return (
     <div className="poseidon">
       <Levels level={6} />
+      <Help text={
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+        } />
       <div className="txtBox">
         <p>
           Odata plecat din templul Atenei, misiunea ta continuă spre insula

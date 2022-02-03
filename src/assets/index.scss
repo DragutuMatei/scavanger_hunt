@@ -95,4 +95,42 @@ p {
     background: $light-cyan;
   }
 }
+
+.help {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+
+  .icon {
+    margin: 20px;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 50%;
+    background: $cadet-grey;
+  }
+
+  .text {
+    overflow: hidden;
+    z-index: 9999;
+    background: $cadet-grey;
+    min-height: 100vh;
+
+    p {
+      font-family: $font;
+      margin-top: 80px;
+      color: white;
+    }
+  }
+}
+
 //amira e o prajitoare

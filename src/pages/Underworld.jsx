@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Help from "../components/Help";
 import Levels from "../components/Levels";
 import Timer from "../components/Timer";
 
@@ -85,7 +86,9 @@ function Underworld() {
   return (
     <div className="underworld">
       <Levels level={2} />
-
+<Help  text={
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+        } />
       <div className="timerContainer">
         {
           <Timer

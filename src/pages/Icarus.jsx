@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from "react";
 import "./try.css";
 import Levels from "../components/Levels";
 import Timer from "../components/Timer";
+import Help from "../components/Help";
 let secsundeFrt;
 
 const Icarus = () => {
@@ -24,10 +25,12 @@ const Icarus = () => {
       bird.style.left = birdLeft + "px";
 
       if (!isGameOver && secsundeFrt === 0) {
-        console.log("asd", );
+        console.log("asd");
         isGameOver = true;
         document.removeEventListener("keyup", control);
-        alert("Ai trecut cu bine si de aceasta provocare, iar ultima te asteapta!");
+        alert(
+          "Ai trecut cu bine si de aceasta provocare, iar ultima te asteapta!"
+        );
         window.location.pathname = "/hermes";
       }
     }
@@ -113,20 +116,23 @@ const Icarus = () => {
         window.location.reload();
       }
     }
-
-   
   }, [start]);
 
   return (
     <div className="icarus">
       <Levels level={8} />
+      <Help
+        text={
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+        }
+      />
       <div className="txtBox">
         <p>
-          Acum că l-ai ajutat pe Tezeu să-l învigă pe Minotaur, ai reușit să urci
-          in legendarul turn, unde Icar si tatal lui, Daedalus, au fost închiși
-          de regele Minos. Pentru a reuși să ajungi în Impărăția Cerurilor
-          trebuie să îmbraci aripile de ceară construite de Daedalus și să te
-          înalți la ceruri.
+          Acum că l-ai ajutat pe Tezeu să-l învigă pe Minotaur, ai reușit să
+          urci in legendarul turn, unde Icar si tatal lui, Daedalus, au fost
+          închiși de regele Minos. Pentru a reuși să ajungi în Impărăția
+          Cerurilor trebuie să îmbraci aripile de ceară construite de Daedalus
+          și să te înalți la ceruri.
         </p>
         <div
           className="button"
