@@ -16,7 +16,9 @@ function Olimp() {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert("Mesajul tau a fost trimis! Multumim pentru participare");
+
+          form.current.reset();
         },
         (error) => {
           console.log(error.text);
