@@ -3,6 +3,7 @@ import Help from "../components/Help";
 import Levels from "../components/Levels";
 
 let se = false;
+let startMeduza, endMeduza;
 function Meduza() {
   const [seUita, setSeUita] = useState(false);
   const [src, setSrc] = useState("/images/medusa_ok.png");
@@ -32,17 +33,25 @@ function Meduza() {
   }, []);
 
   const rezv = () => {
-    setTimeout(() => {
-      setSrc("/images/medusa_ok.png");
-      se = true;
-      console.log(se);
-    }, adaSecundeleAleaRandom(1000, 3000));
 
-    setTimeout(() => {
-      setSrc("/images/medusa.png");
+    let i = adaSecundeleAleaRandom(1000, 3000);
+    console.log(i);
+    let k = adaSecundeleAleaRandom(2500, 4000);
+    console.log(k);
+
+    startMeduza = setTimeout(() => {
+      setSrc("/images/medusa_ok.png");
       se = false;
       console.log(se);
-    }, adaSecundeleAleaRandom(2500, 4000));
+
+      endMeduza = setTimeout(() => {
+        setSrc("/images/medusa.png");
+        se = true;
+        console.log(se);
+      }, 3000);
+      
+    }, 3000);
+
   };
 
   const press = (e) => {
@@ -57,6 +66,19 @@ function Meduza() {
     ) {
       alert("Meduza te-a vazut si trebuie sa o iei de la capat.");
       hero.style.left = 0 + "px";
+      se = false;
+      clearTimeout(startMeduza);
+      clearTimeout(endMeduza);
+      setGata(false);
+
+      setTimeout(() => setSrc("/images/medusa_ok.png"), 100);
+
+      const joc = setInterval(() => {
+        rezv();
+        if (gata) {
+          clearInterval(joc);
+        }
+      }, 6000);
     }
 
     const finish = document.querySelector(".right");
