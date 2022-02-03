@@ -9,8 +9,8 @@ function Meduza() {
   const [trecut, setAtrecut] = useState(false);
   const [gata, setGata] = useState(false);
   const adaSecundeleAleaRandom = (min, max) => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
+    min = Math.ceil(min) * 1000;
+    max = Math.floor(max) * 1000;
     return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is exclusive and the minimum is inclusive
   };
   useEffect(() => {
@@ -28,15 +28,13 @@ function Meduza() {
       if (gata) {
         clearInterval(joc);
       }
-    }, 6000);
-
+    }, 9000);
   }, []);
 
   const rezv = () => {
-
-    let i = adaSecundeleAleaRandom(1000, 3000);
+    let i = adaSecundeleAleaRandom(2, 4);
     console.log(i);
-    let k = adaSecundeleAleaRandom(2500, 4000);
+    let k = adaSecundeleAleaRandom(3, 6);
     console.log(k);
 
     startMeduza = setTimeout(() => {
@@ -48,10 +46,8 @@ function Meduza() {
         setSrc("/images/medusa.png");
         se = true;
         console.log(se);
-      }, 3000);
-      
-    }, 3000);
-
+      }, 4000);
+    }, 5000);
   };
 
   const press = (e) => {
@@ -111,8 +107,8 @@ function Meduza() {
         <p>
           Ai ajuns la templul zeiței Atena, dar ai grija deoarece Medusa este în
           apropiere. Pentru a trece de aceasta și a te apropia de vârful
-          Muntelui Olimp trebuie să treci pe langă ea făra să te
-          observe, altfel te va împietri.
+          Muntelui Olimp trebuie să treci pe langă ea făra să te observe, altfel
+          te va împietri.
         </p>
       </div>
       <div className="joculet">
