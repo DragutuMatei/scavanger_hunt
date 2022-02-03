@@ -1,13 +1,49 @@
-.olimp{
-    width: 100vw;
-    min-height: 100vh;
-    background: url(../../public/images/zeus.jpg);
-    background-position: center top;
-    background-repeat: no-repeat;
+.olimp {
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../../public/images/zeus.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  form {
+    width: 400px;
+    height: auto;
+    position: relative;
     display: flex;
-    background-size: cover;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-  
+    align-items: center;
+    margin: 30px;
+    border: 2px solid $rich-black-fogra-29;
+    padding: 20px;
+    border-radius: 20px;
+
+    h2{
+        color: $prussian-blue;
+        font-weight: 800;
+        font-family: $font;
+        font-size: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    input, textarea {
+      outline: none;
+      border: 2px solid $rich-black-fogra-29;
+      margin: 5px;
+      width: 80%;
+      border-radius: 10px;
+      padding: 10px 15px;
+    }
+    button{
+        outline: none;
+        border: none;
+        margin: 10px;
+    }
+  }
 }
