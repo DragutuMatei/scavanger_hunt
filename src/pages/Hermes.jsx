@@ -99,6 +99,9 @@ function Hermes() {
   const showScore = (player) => {
     if (player.score > 21) {
       document.querySelector(player.scoreSpan).innerHTML = "BUSTED";
+      if (player == YOU) {
+        stand();
+      }
     } else document.querySelector(player.scoreSpan).innerHTML = player.score;
   };
 
