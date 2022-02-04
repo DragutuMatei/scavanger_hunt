@@ -15,8 +15,7 @@ function Cerber() {
       <Levels level={3} />
       <Help
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
-        }
+        "O varianta “Where’s Waldo?” marca Thobor: privește cu atenție detaliile din imagine și găsește in multitudinea de elemente osul, apoi da click pe el și continua vânătoarea de comori."}
       />
       <div className="txtBox">
         <p>

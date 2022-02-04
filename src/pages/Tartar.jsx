@@ -43,7 +43,7 @@ function Tartar() {
       <Levels level={1} />
       <Help
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
+          "După ce apeși pe butonul “Start Nivel” și cronometrul pornește, tine click-ul apăsat începând cu semnul “start” de la începutul labirintului și ghidează cursorul pana la “finish”, fără a te lovi de pereți."
         }
       />
       <div className="timerContainer">

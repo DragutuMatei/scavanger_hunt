@@ -81,8 +81,7 @@ function Styx() {
       <Levels level={4} />
       <Help
        text={
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
-      }/>
+      "Da click pe unul dintre cele 3 pahare și încearcă-ți norocul in a găsi moneda sub acesta. Dacă nu ai nimerit, poți apăsa din nou pe ce pahar consideri, dar abia după ce aștepți cele 2 minute"}/>
       <div className="txtBox">
         <p>
           Ești la un pas de a intra în lumea celor vii, singurul obstacol ce te

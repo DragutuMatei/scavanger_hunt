@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Help from "../components/Help";
 import Levels from "../components/Levels";
 
 let se = false;
@@ -99,9 +100,11 @@ function Meduza() {
     }
   };
 
-  return (
+  return (  
     <div className="meduza">
       <Levels level={5} />
+
+      <Help text="Tine apăsat pe săgeata din dreapta pentru a te deplasa in cealaltă parte a ecranului, dar ai grija sa te opresti de fiecare data când Medusa se întoarce cu fata la tine pentru a nu începe nivelul de la capăt." />
 
       <div className="txtBox">
         <p>

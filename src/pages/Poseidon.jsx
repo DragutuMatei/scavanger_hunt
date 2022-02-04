@@ -236,8 +236,7 @@ function Poseidon() {
     <div className="poseidon">
       <Levels level={6} />
       <Help text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
-        } />
+        "Da click cât de repede poți pe căluții de mare pentru a-i prinde la caleașca. Odată selectat un căluț, numărul lor se va micșora pentru următoarea așezare. Încearcă sa ii prinzi pe toți cât mai repede pentru a nu lua nivelul de la capăt." } />
       <div className="txtBox">
         <p>
           Odata plecat din templul Atenei, misiunea ta continuă spre insula

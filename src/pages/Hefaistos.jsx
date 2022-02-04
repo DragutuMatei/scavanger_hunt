@@ -50,8 +50,7 @@ function Hefaistos() {
       <Levels level={7} />
       <Help
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
-        }
+        "Testează-ți simțul estetic și selectează cele doua părți componente ale sabiei pe care o consideri a fi potrivită pentru a învinge bestia."}
       />
       <div className="txtBox">
         <p>

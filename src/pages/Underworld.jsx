@@ -87,8 +87,7 @@ function Underworld() {
     <div className="underworld">
       <Levels level={2} />
 <Help  text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel possimus qui, unde aperiam sunt facilis veniam quasi reiciendis deserunt voluptatum quae iste quia ad eveniet corrupti blanditiis excepturi exercitationem maiores?"
-        } />
+        "In timpul alocat ai la dispoziție 3 încercări sa dai click pe rodiile potrivite și sa treci la următoarea etapa. Dacă ai rămas fără secunde sau încercări, trebuie sa iei de la capăt doar aceasta proba, nu toată vânătoarea."} />
       <div className="timerContainer">
         {
           <Timer
