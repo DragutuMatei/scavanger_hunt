@@ -100,7 +100,7 @@ function Meduza() {
     }
   };
 
-  return (  
+  return (
     <div className="meduza">
       <Levels level={5} />
 
